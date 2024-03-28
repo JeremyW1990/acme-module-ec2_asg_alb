@@ -13,11 +13,6 @@ variable "instance_type" {
   type        = string
 }
 
-variable "key_name" {
-  description = "The key pair name for the EC2 instances, allowing SSH access."
-  type        = string
-}
-
 variable "security_group_id" {
   description = "The ID of the security group for the EC2 instances and ALB. This security group should allow appropriate inbound and outbound traffic for your application."
   type        = string

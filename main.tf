@@ -2,7 +2,6 @@ resource "aws_launch_template" "acme_web" {
   name_prefix   = "acme-web-${var.environment}-lt-"
   image_id      = var.image_id
   instance_type = var.instance_type
-  key_name      = var.key_name
 
   vpc_security_group_ids = [var.security_group_id]
 
