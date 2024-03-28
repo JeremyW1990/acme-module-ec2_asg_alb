@@ -26,6 +26,8 @@ resource "aws_autoscaling_group" "acme_web" {
 
   vpc_zone_identifier = var.subnet_ids
 
+  target_group_arns = [aws_lb_target_group.acme_web.arn]
+
   tag {
     key                 = "Name"
     value               = "acme-web-${var.environment}-instance"
